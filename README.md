@@ -4,14 +4,37 @@ Yes, we can use the Mendix Platform SDK in Node.js, but we would need to either 
 
 So, here's a starting point using Deno...
 
-## SDK Docs
+## SDKs used
 
-- [Mendix Platform API](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html)
-- [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html)
+> I am including the version number in my imports:
+
+- PlatformSDK: `npm:mendixplatformsdk@5.1.1` - [Documentation](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html)
+- ModelSDK: `npm:mendixmodelsdk@4.69.0` - [Documentation](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html)
 
 ## Instructions
 
-> Coming soon
+```typescript
+import { createClient, getWorkingCopy } from "https://deno.land/x/mendix_toolkit/mod.ts";
+
+const client = createClient({ mxToken: "Your Mendix Personal Access Token" });
+const workingCopy = await getWorkingCopy(client, {
+  appID: "Mendix APP ID",
+});
+
+if (!workingCopy) {
+  return;
+}
+
+const model = await workingCopy.openModel();
+// Do something with the model
+```
+
+> We can use the Model & Platform SDK from NPM
+
+```typescript
+import {} from "npm:mendixmodelsdk@4.69.0";
+import {} from "npm:mendixplatformsdk@5.1.1";
+```
 
 ## License
 
