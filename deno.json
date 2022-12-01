@@ -13,6 +13,5 @@
     "files": {
       "exclude": []
     }
-  },
-  "lock": "deps-lock/json"
+  }
 }

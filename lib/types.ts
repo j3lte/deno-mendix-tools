@@ -9,23 +9,27 @@ export type RequestOptionsUserAccess = GeneralOptions & {
   /**
    * Mendix Username, typically your email address
    *
-   * @see https://docs.mendix.com/apidocs-mxsdk/apidocs/authentication/
+   * See: https://docs.mendix.com/apidocs-mxsdk/apidocs/authentication/
    */
   mxUser: string;
   /**
    * Mendix API Key, this can be obtained in your Mendix Profile
-   * @see https://docs.mendix.com/developerportal/community-tools/mendix-profile/#api-key
+   *
+   * See: https://docs.mendix.com/developerportal/community-tools/mendix-profile/#api-key
    */
   mxApiKey: string;
 };
 
 /**
  * Request Options for request with Personal Access Token. The mxToken can be obtained from Mendix Warden, see documentation.
+ *
+ * See: https://docs.mendix.com/apidocs-mxsdk/mxsdk/setup-your-pat/
  */
 export type RequestOptionsAccessToken = GeneralOptions & {
   /**
    * Mendix PAT (Personal Access Token)
-   * @see https://docs.mendix.com/apidocs-mxsdk/mxsdk/setup-your-pat/
+   *
+   * See: https://docs.mendix.com/apidocs-mxsdk/mxsdk/setup-your-pat/
    */
   mxToken: string;
 };
