@@ -1,4 +1,5 @@
 export { config } from "https://deno.land/x/dotenv@v3.2.0/mod.ts";
+export { cyan, green } from "https://deno.land/std@0.167.0/fmt/colors.ts";
 
 export {
   datatypes,
